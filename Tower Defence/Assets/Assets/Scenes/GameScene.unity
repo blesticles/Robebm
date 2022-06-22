@@ -2979,7 +2979,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66145e3c4e246e14693a4ecb729afaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waypoints:
+  - {fileID: 783360994}
+  - {fileID: 767769471}
+  - {fileID: 1006386872}
+  - {fileID: 438745798}
+  - {fileID: 249695203}
+  - {fileID: 772848027}
   testEnemyPrefab: {fileID: 197334, guid: f561f313e37464b2d982d25715bb43cf, type: 3}
   waves:
   - enemyPrefab: {fileID: 197334, guid: f561f313e37464b2d982d25715bb43cf, type: 3}
