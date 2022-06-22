@@ -31,20 +31,20 @@ public class Sheep : MonoBehaviour
 
     private void HitByHay()
     {
-        sheepSpawner.RemoveSheepFromList(gameObject);
+        
         hitByHay = true;
         runSpeed = 0;
        
         SoundManager.Instance.PlaySheepHitClip();
+        GameStateManager.Instance.SavedSheep();
         
         Destroy(gameObject, gotHayDestroyDelay);
+        sheepSpawner.RemoveSheepFromList(gameObject);
 
         Instantiate(heartPrefab, transform.position + new Vector3(0, heartOffset, 0), Quaternion.identity); //Spawns a heart above the sheeps y location.
         TweenScale tweenScale = gameObject.AddComponent<TweenScale>();
         tweenScale.targetScale = 0;
         tweenScale.timeToReachTarget = gotHayDestroyDelay;
-
-        GameStateManager.Instance.SavedSheep();
         
     }
 
